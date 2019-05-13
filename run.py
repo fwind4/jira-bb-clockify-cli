@@ -5,7 +5,7 @@ import subprocess
 import json
 import sys
 
-with open('/home/wind/projects/jira-bb-clockify-cli/config.local.json') as json_file:  
+with open('config.json') as json_file:  
     conf = json.load(json_file)
 
 if len(sys.argv) == 1 or sys.argv[1] == '-h' :
