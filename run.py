@@ -65,4 +65,7 @@ res = subprocess.run(['git', 'checkout', '-b', branch])
 if res.returncode != 0 :
     res = subprocess.run(['git', 'checkout', branch])
 
-print(res.returncode)
+if conf['useClockify'] == 'true' and isClockify :
+    cmd = ['clockify', 'start', '-p', conf['clockifyProject'], conf['clockifyWS'], issue + ' ' + summary]
+    res = subprocess.run(cmd)
+    

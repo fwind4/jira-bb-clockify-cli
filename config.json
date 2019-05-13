@@ -1,10 +1,12 @@
 {
     "jiraIssuePrefix": "",
+    "useClockify": "false",
+    "clockifyProject": "5b59b27cb07987787c6dfe20", 
     "branchPrefix": "bugfix",
     "jiraEmail": "",
     "jiraToken": "",
-    "useClockify": "false",
     "clockifyUser": "",
     "clockifyPass": "",
+    "clockifyWS": "5b4dae2db079871a7925ce90",
     "jiraId": "drukka"
 }
