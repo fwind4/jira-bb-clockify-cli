@@ -52,12 +52,14 @@ else :
     print('No such issue or bad auth.')
     exit()
 
+print('-------------------------------------')
+
 if branchPre is None :
     branchPre = conf['branchPrefix']
 
-summary = summary.lower().replace(' ', '-')
-summary = summary.encode('ascii',errors='ignore').decode()
-branch = branchPre + '/' + issue + '-' + summary
+branch = summary.lower().replace(' ', '-')
+branch = branch.encode('ascii',errors='ignore').decode()
+branch = branchPre + '/' + issue + '-' + branch
 branch = branch[:47]
 #print(branch)
 
@@ -65,7 +67,10 @@ res = subprocess.run(['git', 'checkout', '-b', branch])
 if res.returncode != 0 :
     res = subprocess.run(['git', 'checkout', branch])
 
+print('-------------------------------------')
+
 if conf['useClockify'] == 'true' and isClockify :
     cmd = ['clockify', 'start', '-p', conf['clockifyProject'], conf['clockifyWS'], issue + ' ' + summary]
     res = subprocess.run(cmd)
-    
+    if res.returncode != 0 :
+        print('Clockify started!')
