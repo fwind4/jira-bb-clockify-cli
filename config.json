@@ -1,0 +1,10 @@
+{
+    "jiraIssuePrefix": "",
+    "branchPrefix": "bugfix",
+    "jiraEmail": "",
+    "jiraToken": "",
+    "useClockify": "false",
+    "clockifyUser": "",
+    "clockifyPass": "",
+    "jiraId": "drukka"
+}
