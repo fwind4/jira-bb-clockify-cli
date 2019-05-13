@@ -5,6 +5,10 @@ Jira Bitbucket Clockify automated cli tool
 
 ## Usage:
 
+Generate an Atlassian api key.
+
+(Optional) Generate a clockify api key. 
+
 Edit the `config.json` file.
 Set the absolute path to you're config file in `run.py`.
 
@@ -21,7 +25,7 @@ python run.py [OPTIONS] <issue number> | <issue prefix>-<issue number>
             -c                - Don't start Clockify
 ```
 
-## For Clockify you need [Clockify CLI](https://github.com/t5/clockify-cli)
+## (Optional) For Clockify you need [Clockify CLI](https://github.com/t5/clockify-cli)
 
 You can set the 2 env variables permanently in `.zshrc` or `.bashrc`,
 depending on shell used.
