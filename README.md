@@ -6,8 +6,11 @@ Jira Bitbucket Clockify automated cli tool
 ## Usage:
 
 Edit the `config.json` file.
+Set the absolute path to you're config file in `run.py`.
 
-`python run.py`
+In you're project folder:
+
+`python <path to>/run.py`
 ```
 python run.py [OPTIONS] <issue number> | <issue prefix>-<issue number>
             ex: python run.py 721
