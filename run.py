@@ -15,9 +15,10 @@ if len(sys.argv) == 1 or sys.argv[1] == '-h' :
             ex: python run.py 721\n \
                 python run.py BER-721\n \
                 \n\
-            -p <issue prefix> - Prepends issue prefix. \n\
-                                ex: python run.py -p BER 721\n\
-            -c                - Don\'t start Clockify\n')
+            -p <issue prefix>  - Manually prepends issue prefix. \n\
+                                 ex: python run.py -p BER 721\n\
+            -b <branch prefix> - Manually set a branch prefix. \n\
+            -c                 - Don\'t start Clockify\n')
     exit()
 
 argc = 1

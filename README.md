@@ -20,9 +20,10 @@ python run.py [OPTIONS] <issue number> | <issue prefix>-<issue number>
             ex: python run.py 721
                  python run.py BER-721
                  
-            -p <issue prefix> - Prepends issue prefix. 
-                                ex: python run.py -p BER 721
-            -c                - Don't start Clockify
+            -p <issue prefix>  - Manually prepends issue prefix. 
+                                 ex: python run.py -p BER 721
+            -b <branch prefix> - Manually set a branch prefix. 
+            -c                 - Don't start Clockify
 ```
 
 ## (Optional) For Clockify you need [Clockify CLI](https://github.com/t5/clockify-cli)
