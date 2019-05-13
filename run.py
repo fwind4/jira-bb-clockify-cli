@@ -24,7 +24,7 @@ argc = 1
 isClockify = True
 issue = ''
 branchPre = None
-while argc < (len(sys.argv)-1) :
+while argc < (len(sys.argv)) :
     if sys.argv[argc] == '-p' :
         argc += 1
         issue += sys.argv[argc].upper()
@@ -40,7 +40,7 @@ while argc < (len(sys.argv)-1) :
         issue += conf['jiraIssuePrefix']
     argc += 1
 
-issue += '-' + sys.argv[argc]
+issue += '-' + sys.argv[argc-1]
 
 url = 'https://'+conf['jiraId']+'.atlassian.net/rest/api/latest/issue/' + issue
 r = requests.get(url, auth=(conf['jiraEmail'], conf['jiraToken']))
