@@ -5,7 +5,7 @@ import subprocess
 import json
 import sys
 
-with open('config.local.json') as json_file:  
+with open('config.json') as json_file:  
     conf = json.load(json_file)
 
 if len(sys.argv) == 1 or sys.argv[1] == '-h' :
@@ -72,5 +72,5 @@ print('-------------------------------------')
 if conf['useClockify'] == 'true' and isClockify :
     cmd = ['clockify', 'start', '-p', conf['clockifyProject'], conf['clockifyWS'], issue + ' ' + summary]
     res = subprocess.run(cmd)
-    if res.returncode != 0 :
+    if res.returncode == 0 :
         print('Clockify started!')
