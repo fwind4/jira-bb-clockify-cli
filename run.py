@@ -21,6 +21,8 @@ if len(sys.argv) == 1 or sys.argv[1] == '-h' :
             -c                 - Don\'t start Clockify\n')
     exit()
 
+    valami()
+
 argc = 1
 isClockify = True
 issue = ''
